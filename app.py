@@ -5,7 +5,7 @@ import requests
 import bz2
 import os
 
-movies_list = pickle.load(open('C:/Users/Appu/Desktop/Streamlit Test/Best Code Streamlit/Campus X streamlit/02. ML_Project2_Movie_Recommendation_System-main/recommended_movies.pkl','rb'))
+movies_list = pickle.load(open('recommended_movies.pkl','rb'))
 
 st.title('Movie Recommender System')
 st.text('By Sahil Josan')
@@ -15,7 +15,7 @@ selected_movie_name = st.selectbox(
 movies_list['title'].values)
 
 # similarity = pickle.load(open("similarity.pkl",'rb'))
-ifile = open("C:/Users/Appu/Desktop/Streamlit Test/Best Code Streamlit/Campus X streamlit/02. ML_Project2_Movie_Recommendation_System-main/similarity.pkl","rb")
+ifile = open("similarity.pkl","rb")
 similarity = pickle.loads(bz2.decompress(ifile.read()))
 ifile.close()
 
