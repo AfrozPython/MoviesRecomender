@@ -8,7 +8,7 @@ import os
 movies_list = pickle.load(open('recommended_movies.pkl','rb'))
 
 st.title('Movie Recommender System')
-st.text('By Sahil Josan')
+st.text('Build by Afroz')
 
 selected_movie_name = st.selectbox(
 'Select movie from drop down list',
